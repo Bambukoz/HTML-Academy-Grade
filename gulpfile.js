@@ -64,7 +64,7 @@ const webp = () => {
     .pipe(imageWebp({
       quality: 90
     }))
-    .pipe(gulp.dest(`source/img/webp`));
+    .pipe(gulp.dest(`source/img/`));
 };
 
 exports.webp = webp;
@@ -72,12 +72,12 @@ exports.webp = webp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src(`source/img/svg/icon-*.svg`)
+  return gulp.src(`source/img/svg/{icon-*,logo}.svg`)
     .pipe(svgStore({
       inlineSvg: true
     }))
     .pipe(rename(`sprite.svg`))
-    .pipe(gulp.dest(`build/img`));
+    .pipe(gulp.dest(`source/img`));
 };
 
 exports.sprite = sprite;
