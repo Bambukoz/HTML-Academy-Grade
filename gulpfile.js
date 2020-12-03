@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/* eslint-disable */
 'use strict';
 
 const gulp = require(`gulp`);
@@ -60,7 +60,7 @@ exports.images = images;
 // WebP
 
 const webp = () => {
-  return gulp.src(`source/img/**/*.{jpg,png}`)
+  return gulp.src(`source/img/**/pic-*.{jpg,png}`)
     .pipe(imageWebp({
       quality: 90
     }))
@@ -77,7 +77,7 @@ const sprite = () => {
       inlineSvg: true
     }))
     .pipe(rename(`sprite.svg`))
-    .pipe(gulp.dest(`source/img`));
+    .pipe(gulp.dest(`build/img`));
 };
 
 exports.sprite = sprite;
@@ -169,9 +169,9 @@ exports.refresh = refresh;
 // Watcher
 
 const watch = () => {
-  gulp.watch(`source/*.html`, gulp.series(`html`, `refresh`));
+  gulp.watch(`source/**/*.html`, gulp.series(`html`, `refresh`));
   gulp.watch(`source/sass/**/*.scss`, gulp.series(`css`));
-  gulp.watch(`source/img/icon-*.svg`, gulp.series(`sprite`, `html`, `refresh`));
+  gulp.watch(`source/img/svg/{icon-*,logo}.svg`, gulp.series(`sprite`, `html`, `refresh`));
   gulp.watch(`source/js/**/*.js`, gulp.series(`js`, `refresh`));
 };
 
@@ -180,6 +180,7 @@ const build = gulp.series(
     copy,
     css,
     js,
+    sprite,
     html
 );
 
