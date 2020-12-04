@@ -30,8 +30,8 @@ const css = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename(`style.min.css`))
+    // .pipe(csso())
+    // .pipe(rename(`style.min.css`))
     .pipe(sourcemap.write(`.`))
     .pipe(gulp.dest(`build/css`))
     .pipe(sync.stream());
@@ -72,7 +72,7 @@ exports.webp = webp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src(`source/img/svg/{icon-*,logo}.svg`)
+  return gulp.src(`source/img/svg/{icon-*,logo*}.svg`)
     .pipe(svgStore({
       inlineSvg: true
     }))

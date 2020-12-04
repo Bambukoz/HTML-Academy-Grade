@@ -1,17 +1,25 @@
 'use strict';
 
-const pageHeader = document.querySelector(`.page-header`);
-const headerToggle = pageHeader.querySelector(`.page-header__toggle`);
+(() => {
+  const pageClass = {
+    NOJS: `header__wrapper--nojs`,
+    OPEN: `header__wrapper--open`
+  };
+  const header = document.querySelector(`.js-header`);
+  const menu = header.querySelector(`.js-menu`);
+  const openBtn = header.querySelector(`.js-btn-open`);
+  const closeBtn = header.querySelector(`.js-btn-close`);
 
-pageHeader.classList.remove(`page-header--nojs`);
+  const onHeaderToggleClick = (evt) => {
+    if (evt.target === openBtn) {
+      menu.classList.add(pageClass.OPEN);
+    } if (evt.target === closeBtn) {
+      menu.classList.remove(pageClass.OPEN);
+    }
+  };
 
-headerToggle.addEventListener(`click`, onHeaderToggleClick);
-const onHeaderToggleClick = () => {
-  if (pageHeader.classList.contains(`page-header--closed`)) {
-    pageHeader.classList.remove(`page-header--closed`);
-    pageHeader.classList.add(`page-header--opened`);
-  } else {
-    pageHeader.classList.add(`page-header--closed`);
-    pageHeader.classList.remove(`page-header--opened`);
-  }
-};
+  menu.classList.remove(pageClass.NOJS);
+  openBtn.style.display = `block`;
+
+  header.addEventListener(`click`, onHeaderToggleClick);
+})();

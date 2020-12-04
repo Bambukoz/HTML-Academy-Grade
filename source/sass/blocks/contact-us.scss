@@ -1,0 +1,27 @@
+.contact-us {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.contact-us__icon-phone {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  fill: none;
+}
+
+.contact-us__tel {
+  width: 227px;
+  color: $color-text-darkest;
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration: underline;
+  padding-left: 39px;
+}
