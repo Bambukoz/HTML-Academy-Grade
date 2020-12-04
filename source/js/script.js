@@ -2,8 +2,8 @@
 
 (() => {
   const pageClass = {
-    NOJS: `header__wrapper--nojs`,
-    OPEN: `header__wrapper--open`
+    NOJS: `header__container--nojs`,
+    OPEN: `header__container--open`
   };
   const header = document.querySelector(`.js-header`);
   const menu = header.querySelector(`.js-menu`);
