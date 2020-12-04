@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Way: Путешествие по Европе</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
   <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font">
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
@@ -17,27 +17,33 @@
 </head>
 
 <body class="page">
-  <header class="page__header header">
-    <a class="logo" href="#nowhere">
-      <svg width="57" height="22">
-        <use xlink:href="img/sprite.svg#logo"></use>
-      </svg>
-    </a>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="#cards">О путешествии</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#prices">Цены</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="contact-us contact-us--header">
-      <svg class="contact-us__icon-phone" width="30" height="30">
-        <use xlink:href="img/sprite.svg#icon-phone"></use>
-      </svg>
-      <a class="contact-us__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+  <header class="page__header header js-header">
+    <div class="header__top">
+      <a class="header__logo">
+        <svg width="57" height="22">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <button class="btn btn-burger js-btn-open" type="button" aria-label="Открыть меню"></button>
+    </div>
+    <div class="header__wrapper header__wrapper--nojs js-menu">
+      <button class="btn btn-cross js-btn-close" type="button" aria-label="Закрыть меню"></button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#cards">О&nbsp;путешествии</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#prices">Цены</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="contact-us contact-us--header">
+        <svg class="contact-us__icon-phone" width="30" height="30">
+          <use xlink:href="img/sprite.svg#icon-phone"></use>
+        </svg>
+        <a class="contact-us__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+      </div>
     </div>
   </header>
   <main class="page__main main">
@@ -53,10 +59,10 @@
         <li class="cards__item">
           <a class="cards__link" href="#description-grece">
             <picture>
-              <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/card-grece-desktop@1x.webp, img/jpg/card-grece-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/jpg/card-grece@1x.webp, img/jpg/card-grece@2x.webp 2x">
-              <source media="(min-width: 1024px)" srcset="img/jpg/card-grece-desktop@1x.jpg, img/jpg/card-grece-desktop@2x.jpg 2x">
-              <img src="img/jpg/card-grece@1x.jpg" srcset="img/jpg/card-grece@2x.jpg 2x" alt="Вилла на скале - Греция">
+              <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-grece@1x.webp, img/jpg/card-grece@2x.webp 2x">
+              <source type="image/webp" srcset="img/jpg/card-grece-desktop@1x.webp, img/jpg/card-grece-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/jpg/card-grece@1x.jpg, img/jpg/card-grece@2x.jpg 2x">
+              <img src="img/jpg/card-grece-desktop@1x.jpg" srcset="img/jpg/card-grece-desktop@2x.jpg 2x" alt=" Вилла на скале - Греция" loading="lazy">
             </picture>
             <span class="cards__text">Греция</span>
           </a>
@@ -64,10 +70,10 @@
         <li class="cards__item">
           <a class="cards__link" href="#description-albania">
             <picture>
-              <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/card-albania-desktop@1x.webp, img/jpg/card-albania-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/jpg/card-albania@1x.webp, img/jpg/card-albania@2x.webp 2x">
-              <source media="(min-width: 1024px)" srcset="img/jpg/card-albania-desktop@1x.jpg, img/jpg/card-albania-desktop@2x.jpg 2x">
-              <img src="img/jpg/card-albania@1x.jpg" srcset="img/jpg/card-albania@2x.jpg 2x" alt="Пляж, море - Албания">
+              <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-albania@1x.webp, img/jpg/card-albania@2x.webp 2x">
+              <source type="image/webp" srcset="img/jpg/card-albania-desktop@1x.webp, img/jpg/card-albania-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/jpg/card-albania@1x.jpg, img/jpg/card-albania@2x.jpg 2x">
+              <img src="img/jpg/card-albania-desktop@1x.jpg" srcset="img/jpg/card-albania-desktop@2x.jpg 2x" alt="Пляж, море - Албания" loading="lazy">
             </picture>
             <span class="cards__text">Албания</span>
           </a>
@@ -75,10 +81,10 @@
         <li class="cards__item">
           <a class="cards__link" href="#description-macedonia">
             <picture>
-              <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/card-macedonia-desktop@1x.webp, img/jpg/card-macedonia-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/jpg/card-macedonia@1x.webp, img/jpg/card-macedonia@2x.webp 2x">
-              <source media="(min-width: 1024px)" srcset="img/jpg/card-macedonia-desktop@1x.jpg, img/jpg/card-macedonia-desktop@2x.jpg 2x">
-              <img src="img/jpg/card-macedonia@1x.jpg" srcset="img/jpg/card-macedonia@2x.jpg 2x" alt="Церковь на фоне моря - Македония">
+              <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-macedonia@1x.webp, img/jpg/card-macedonia@2x.webp 2x">
+              <source type="image/webp" srcset="img/jpg/card-macedonia-desktop@1x.webp, img/jpg/card-macedonia-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/jpg/card-macedonia@1x.jpg, img/jpg/card-macedonia@2x.jpg 2x">
+              <img src="img/jpg/card-macedonia-desktop@1x.jpg" srcset="img/jpg/card-macedonia-desktop@2x.jpg 2x" alt="Церковь на фоне моря - Македония" loading="lazy">
             </picture>
             <span class="cards__text">Македония</span>
           </a>
@@ -86,10 +92,10 @@
         <li class="cards__item">
           <a class="cards__link" href="#description-montenegro">
             <picture>
-              <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/card-montenegro-desktop@1x.webp, img/jpg/card-montenegro-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/jpg/card-montenegro@1x.webp, img/jpg/card-montenegro@2x.webp 2x">
-              <source media="(min-width: 1024px)" srcset="img/jpg/card-montenegro-desktop@1x.jpg, img/jpg/card-montenegro-desktop@2x.jpg 2x">
-              <img src="img/jpg/card-montenegro@1x.jpg" srcset="img/jpg/card-montenegro@2x.jpg 2x" alt="Горная река и лес - Черногория">
+              <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-montenegro@1x.webp, img/jpg/card-montenegro@2x.webp 2x">
+              <source type="image/webp" srcset="img/jpg/card-montenegro-desktop@1x.webp, img/jpg/card-montenegro-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/jpg/card-montenegro@1x.jpg, img/jpg/card-montenegro@2x.jpg 2x">
+              <img src="img/jpg/card-montenegro-desktop@1x.jpg" srcset="img/jpg/card-montenegro-desktop@2x.jpg 2x" alt="Горная река и лес - Черногория" loading="lazy">
             </picture>
             <span class="cards__text">Черногория</span>
           </a>
@@ -97,10 +103,10 @@
         <li class="cards__item">
           <a class="cards__link" href="#description-croatia">
             <picture>
-              <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/card-croatia-desktop@1x.webp, img/jpg/card-croatia-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/jpg/card-croatia@1x.webp, img/jpg/card-croatia@2x.webp 2x">
-              <source media="(min-width: 1024px)" srcset="img/jpg/card-croatia-desktop@1x.jpg, img/jpg/card-croatia-desktop@2x.jpg 2x">
-              <img src="img/jpg/card-croatia@1x.jpg" srcset="img/jpg/card-croatia@2x.jpg 2x" alt="Пещеры - Хорватия">
+              <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-croatia@1x.webp, img/jpg/card-croatia@2x.webp 2x">
+              <source type="image/webp" srcset="img/jpg/card-croatia-desktop@1x.webp, img/jpg/card-croatia-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/jpg/card-croatia@1x.jpg, img/jpg/card-croatia@2x.jpg 2x">
+              <img src="img/jpg/card-croatia-desktop@1x.jpg" srcset="img/jpg/card-croatia-desktop@2x.jpg 2x" alt="Пещеры - Хорватия" loading="lazy">
             </picture>
             <span class="cards__text">Хорватия</span>
           </a>
@@ -140,12 +146,12 @@
         </div>
         <div class="photo">
           <picture>
-            <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/photo-grece-desktop@1x.webp, img/jpg/photo-grece-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/jpg/photo-grece-tablet@1x.webp, img/jpg/photo-grece-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-grece@1x.webp, img/jpg/photo-grece@2x.webp 2x">
-            <source media="(min-width: 1024px)" srcset="img/jpg/photo-grece-desktop@1x.jpg, img/jpg/photo-grece-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/jpg/photo-grece-tablet@1x.jpg, img/jpg/photo-grece-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-grece@1x.jpg" srcset="img/jpg/photo-grece@2x.jpg 2x" alt="Вилла на скале - Греция">
+            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-grece@1x.webp, img/jpg/photo-grece@2x.webp 2x">
+            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-grece-tablet@1x.webp, img/jpg/photo-grece-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/jpg/photo-grece-desktop@1x.webp, img/jpg/photo-grece-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/jpg/photo-grece@1x.jpg, img/jpg/photo-grece@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/jpg/photo-grece-tablet@1x.jpg, img/jpg/photo-grece-tablet@2x.jpg 2x">
+            <img src="img/jpg/photo-grece-desktop@1x.jpg" srcset="img/jpg/photo-grece-desktop@2x.jpg 2x" alt="Вилла на скале - Греция" loading="lazy">
           </picture>
         </div>
         <div class="reviews">
@@ -164,12 +170,12 @@
         </div>
         <div class="photo">
           <picture>
-            <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/photo-albania-desktop@1x.webp, img/jpg/photo-albania-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/jpg/photo-albania-tablet@1x.webp, img/jpg/photo-albania-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-albania@1x.webp, img/jpg/photo-albania@2x.webp 2x">
-            <source media="(min-width: 1024px)" srcset="img/jpg/photo-albania-desktop@1x.jpg, img/jpg/photo-albania-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/jpg/photo-albania-tablet@1x.jpg, img/jpg/photo-albania-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-albania@1x.jpg" srcset="img/jpg/photo-albania@2x.jpg 2x" alt="Пляж, море - Албания">
+            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-albania@1x.webp, img/jpg/photo-albania@2x.webp 2x">
+            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-albania-tablet@1x.webp, img/jpg/photo-albania-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/jpg/photo-albania-desktop@1x.webp, img/jpg/photo-albania-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/jpg/photo-albania@1x.jpg, img/jpg/photo-albania@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/jpg/photo-albania-tablet@1x.jpg, img/jpg/photo-albania-tablet@2x.jpg 2x">
+            <img src="img/jpg/photo-albania-desktop@1x.jpg" srcset="img/jpg/photo-albania-desktop@2x.jpg 2x" alt="Пляж, море - Албания" loading="lazy">
           </picture>
         </div>
         <div class="reviews">
@@ -188,12 +194,12 @@
         </div>
         <div class="photo">
           <picture>
-            <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/photo-macedonia-desktop@1x.webp, img/jpg/photo-macedonia-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/jpg/photo-macedonia-tablet@1x.webp, img/jpg/photo-macedonia-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-macedonia@1x.webp, img/jpg/photo-macedonia@2x.webp 2x">
-            <source media="(min-width: 1024px)" srcset="img/jpg/photo-macedonia-desktop@1x.jpg, img/jpg/photo-macedonia-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/jpg/photo-macedonia-tablet@1x.jpg, img/jpg/photo-macedonia-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-macedonia@1x.jpg" srcset="img/jpg/photo-macedonia@2x.jpg 2x" alt="Церковь на фоне моря - Македония">
+            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-macedonia@1x.webp, img/jpg/photo-macedonia@2x.webp 2x">
+            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-macedonia-tablet@1x.webp, img/jpg/photo-macedonia-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/jpg/photo-macedonia-desktop@1x.webp, img/jpg/photo-macedonia-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/jpg/photo-macedonia@1x.jpg, img/jpg/photo-macedonia@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/jpg/photo-macedonia-tablet@1x.jpg, img/jpg/photo-macedonia-tablet@2x.jpg 2x">
+            <img src="img/jpg/photo-macedonia-desktop@1x.jpg" srcset="img/jpg/photo-macedonia-desktop@2x.jpg 2x" alt="Церковь на фоне моря - Македония" loading="lazy">
           </picture>
         </div>
         <div class="reviews">
@@ -212,12 +218,12 @@
         </div>
         <div class="photo">
           <picture>
-            <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/photo-montenegro-desktop@1x.webp, img/jpg/photo-montenegro-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/jpg/photo-montenegro-tablet@1x.webp, img/jpg/photo-montenegro-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-montenegro@1x.webp, img/jpg/photo-montenegro@2x.webp 2x">
-            <source media="(min-width: 1024px)" srcset="img/jpg/photo-montenegro-desktop@1x.jpg, img/jpg/photo-montenegro-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/jpg/photo-montenegro-tablet@1x.jpg, img/jpg/photo-montenegro-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-montenegro@1x.jpg" srcset="img/jpg/photo-montenegro@2x.jpg 2x" alt="Горная река и лес - Черногория">
+            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-montenegro@1x.webp, img/jpg/photo-montenegro@2x.webp 2x">
+            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-montenegro-tablet@1x.webp, img/jpg/photo-montenegro-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/jpg/photo-montenegro-desktop@1x.webp, img/jpg/photo-montenegro-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/jpg/photo-montenegro@1x.jpg, img/jpg/photo-montenegro@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/jpg/photo-montenegro-tablet@1x.jpg, img/jpg/photo-montenegro-tablet@2x.jpg 2x">
+            <img src="img/jpg/photo-montenegro-desktop@1x.jpg" srcset="img/jpg/photo-montenegro-desktop@2x.jpg 2x" alt="Горная река и лес - Черногория" loading="lazy">
           </picture>
         </div>
         <div class="reviews">
@@ -236,12 +242,12 @@
         </div>
         <div class="photo">
           <picture>
-            <source media="(min-width: 1024px)" type="image/webp" srcset="img/jpg/photo-croatia-desktop@1x.webp, img/jpg/photo-croatia-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/jpg/photo-croatia-tablet@1x.webp, img/jpg/photo-croatia-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-croatia@1x.webp, img/jpg/photo-croatia@2x.webp 2x">
-            <source media="(min-width: 1024px)" srcset="img/jpg/photo-croatia-desktop@1x.jpg, img/jpg/photo-croatia-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/jpg/photo-croatia-tablet@1x.jpg, img/jpg/photo-croatia-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-croatia@1x.jpg" srcset="img/jpg/photo-croatia@2x.jpg 2x" alt="Пещеры - Хорватия">
+            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-croatia@1x.webp, img/jpg/photo-croatia@2x.webp 2x">
+            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-croatia-tablet@1x.webp, img/jpg/photo-croatia-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/jpg/photo-croatia-desktop@1x.webp, img/jpg/photo-croatia-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/jpg/photo-croatia@1x.jpg, img/jpg/photo-croatia@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/jpg/photo-croatia-tablet@1x.jpg, img/jpg/photo-croatia-tablet@2x.jpg 2x">
+            <img src="img/jpg/photo-croatia-desktop@1x.jpg" srcset="img/jpg/photo-croatia-desktop@2x.jpg 2x" alt="Пещеры - Хорватия" loading="lazy">
           </picture>
         </div>
         <div class="reviews">
@@ -309,12 +315,12 @@
     <section class="feedback">
       <h2 class="feedback__title">У Вас остались вопросы?</h2>
       <p class="feedback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-      <form class="feedback__form" action="https://echo.htmlacademy.ru" method="get">
-        <label class="feedback__label" aria-label="Введите номер мобильного телефона">
-          <input class="feedback__input" name="mobile-number" type="tel" pattern="[0-9]{10}" minlength="10" placeholder="Введите 10 цифр номера" required>
+      <form class="form" action="https://echo.htmlacademy.ru" method="get">
+        <label class="form__label" aria-label="Введите номер мобильного телефона">
+          <input class="form__input" name="mobile-number" type="tel" pattern="[0-9]{10}" minlength="10" placeholder="Введите 10 цифр номера" required>
         </label>
-        <label class="feedback__label" aria-label="Введите e-mail">
-          <input class="feedback__input" name="user-email" type="email">
+        <label class="form__label" aria-label="Введите e-mail">
+          <input class="form__input" name="user-email" type="email">
         </label>
         <button class="btn submit-btn" type="submit">Отправить</button>
       </form>
@@ -398,21 +404,21 @@
     </div>
   </footer>
 
-  <div class="popup feedback">
-    <div class="popup__img">
+  <div class="modal">
+    <div class="modal__img">
       <picture>
         <source type="image/webp" srcset="img/jpg/pic-buy-tour@1x.webp, img/jpg/pic-buy-tour@2x.webp 2x">
-        <img src="img/jpg/pic-buy-tour@1x.jpg" srcset="img/jpg/pic-buy-tour@2x.jpg 2x" alt="Вид на море">
+        <img src="img/jpg/pic-buy-tour@1x.jpg" srcset="img/jpg/pic-buy-tour@2x.jpg 2x" alt="Вид на море" loading="lazy">
       </picture>
     </div>
-    <h2 class="popup__title">Купить тур</h2>
-    <button class="popup__close" type="button"></button>
-    <form class="feedback__form" action="https://echo.htmlacademy.ru" method="get">
-      <label class="feedback__label" aria-label="Введите номер мобильного телефона">
-        <input class="feedback__input" name="mobile-number" type="tel" pattern="[0-9]{10}" minlength="10" placeholder="Введите 10 цифр номера" required>
+    <h2 class="modal__title">Купить тур</h2>
+    <button class="modal__close" type="button"></button>
+    <form class="form" action="https://echo.htmlacademy.ru" method="get">
+      <label class="form__label" aria-label="Введите номер мобильного телефона">
+        <input class="form__input" name="mobile-number" type="tel" pattern="[0-9]{10}" minlength="10" placeholder="Введите 10 цифр номера" required>
       </label>
-      <label class="feedback__label" aria-label="Введите e-mail">
-        <input class="feedback__input" name="user-email" type="email">
+      <label class="form__label" aria-label="Введите e-mail">
+        <input class="form__input" name="user-email" type="email">
       </label>
       <button class="btn submit-btn" type="submit">Отправить</button>
     </form>

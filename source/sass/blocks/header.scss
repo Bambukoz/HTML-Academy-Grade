@@ -1,0 +1,87 @@
+.header {
+  @include page-wrapper-desktop;
+  min-width: 1330px;
+  max-width: 1920px;
+  display: flex;
+  align-items: center;
+  padding-top: 34px;
+  padding-bottom: 34px;
+
+  @include tablet {
+    min-width: 320px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+
+.header__top {
+  width: 57px;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  padding-bottom: 3px;
+
+  @include tablet {
+    width: 100%;
+    min-height: 50px;
+    padding-left: $padding-tablet;
+    padding-bottom: 0;
+    margin-right: 0;
+  }
+
+  @include mobile {
+    padding-left: $padding-mobile;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 15px;
+
+  @include tablet {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &--open {
+    @include tablet {
+      position: relative;
+      display: flex;
+      background-color: $background-primary;
+      margin-top: -50px;
+      padding-top: 50px;
+      z-index: 1;
+    }
+  }
+
+  &--nojs {
+    @include tablet {
+      display: flex;
+    }
+  }
+}
+
+.header__logo {
+  line-height: 0;
+
+  @include tablet {
+    margin-top: 4px;
+  }
+
+  & svg {
+    width: 57px;
+    height: 22px;
+
+    @include tablet {
+      width: 44px;
+      height: 18px;
+    }
+  }
+}
