@@ -18,31 +18,33 @@
 
 <body class="page">
   <header class="page__header header js-header">
-    <div class="header__top">
-      <a class="header__logo">
-        <svg width="57" height="22">
-          <use xlink:href="img/sprite.svg#logo"></use>
-        </svg>
-      </a>
-      <button class="btn btn-burger js-btn-open" type="button" aria-label="Открыть меню"></button>
-    </div>
-    <div class="header__wrapper header__wrapper--nojs js-menu">
-      <button class="btn btn-cross js-btn-close" type="button" aria-label="Закрыть меню"></button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#cards">О&nbsp;путешествии</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#prices">Цены</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="contact-us contact-us--header">
-        <svg class="contact-us__icon-phone" width="30" height="30">
-          <use xlink:href="img/sprite.svg#icon-phone"></use>
-        </svg>
-        <a class="contact-us__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+    <div class="header__wrapper">
+      <div class="header__top">
+        <a class="header__logo">
+          <svg width="57" height="22">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <button class="btn btn-burger js-btn-open" type="button" aria-label="Открыть меню"></button>
+      </div>
+      <div class="header__container header__container--nojs js-menu">
+        <button class="btn btn-cross js-btn-close" type="button" aria-label="Закрыть меню"></button>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#cards">О&nbsp;путешествии</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#prices">Цены</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contact-us contact-us--header">
+          <svg class="contact-us__icon-phone" width="30" height="30">
+            <use xlink:href="img/sprite.svg#icon-phone"></use>
+          </svg>
+          <a class="contact-us__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+        </div>
       </div>
     </div>
   </header>
@@ -327,80 +329,87 @@
     </section>
   </main>
   <footer class="page__footer footer">
-    <div class="travel">
-      <h2 class="travel__title">Следующие путешествия</h2>
-      <ul class="travel__list">
-        <li class="travel__item">
-          <p class="travel__text">Марсель</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Ним</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Монпелье</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Барселона</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Пальма</p>
-        </li>
-      </ul>
-      <ul class="travel__list">
-        <li class="travel__item">
-          <p class="travel__text">Сардиния</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Палермо</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Катания</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Неаполь</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Рим</p>
-        </li>
-      </ul>
-      <ul class="travel__list">
-        <li class="travel__item">
-          <p class="travel__text">Корс</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Ницца</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Монако</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Динь-ле-Бен</p>
-        </li>
-        <li class="travel__item">
-          <p class="travel__text">Гренобль</p>
-        </li>
-      </ul>
-    </div>
-    <div class="contacts">
-      <h2 class="contacts__title">Наши контакты</h2>
-      <ul class="contacts__list">
-        <li class="contacts__item">
-          <svg class="contacts__icon-email" width="26" height="20">
-            <use xlink:href="img/sprite.svg#icon-email"></use>
-          </svg>
-          <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-        </li>
-        <li class="contacts__item">
-          <svg class="contacts__icon-phone" width="30" height="30">
-            <use xlink:href="img/sprite.svg#icon-phone"></use>
-          </svg>
-          <a class="contacts__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
-        </li>
-      </ul>
-    </div>
-    <div class="extra">
-      <h2 class="extra__title">Корпоративные путешествия</h2>
-      <p class="extra__text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+    <div class="footer__wrapper">
+      <section class="footer__container footer__container--travel">
+        <h2 class="footer__title">Следующие путешествия</h2>
+        <div class="footer__list-wrapper">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <p class="footer__text">Марсель</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Ним</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Монпелье</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Барселона</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Пальма</p>
+            </li>
+          </ul>
+          <ul class="footer__list footer__list--second">
+            <li class="footer__item">
+              <p class="footer__text">Сардиния</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Палермо</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Катания</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Неаполь</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Рим</p>
+            </li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <p class="footer__text">Корс</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Ницца</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Монако</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Динь-ле-Бен</p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__text">Гренобль</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer__container footer__container--contacts">
+        <h2 class="footer__title">Наши контакты</h2>
+        <ul class="footer__list footer__list--contacts">
+          <li class="footer__item footer__item--contacts">
+            <svg class="footer__icon footer__icon--email" width="26" height="20">
+              <use xlink:href="img/sprite.svg#icon-email"></use>
+            </svg>
+            <a class="footer__email" href="mailto:puteshestviemechta@gmail.ru">
+              <span class="footer__email-email">puteshestviemechta@gmail.ru</span>
+              <span class="footer__email-text">Почта</span>
+            </a>
+          </li>
+          <li class="footer__item footer__item--contacts">
+            <svg class="footer__icon footer__icon--phone" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            <a class="footer__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer__container footer__container--extra">
+        <h2 class="footer__title footer__title--extra">Корпоративные путешествия</h2>
+        <p class="footer__text footer__text--extra">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию,&nbsp;помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+      </section>
     </div>
   </footer>
 

@@ -1,17 +1,26 @@
 .header {
-  @include page-wrapper-desktop;
-  min-width: 1330px;
-  max-width: 1920px;
+  min-width: 320px;
   display: flex;
   align-items: center;
   padding-top: 34px;
-  padding-bottom: 34px;
+  padding-bottom: 31px;
 
   @include tablet {
-    min-width: 320px;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
+  }
+}
+
+.header__wrapper {
+  width: 61%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    width: 100%;
   }
 }
 
@@ -35,7 +44,7 @@
   }
 }
 
-.header__wrapper {
+.header__container {
   display: flex;
   justify-content: space-between;
   margin-left: auto;
