@@ -1,11 +1,56 @@
 .btn {
   @include btn-reset;
+  display: block;
   position: relative;
   outline: none;
+
+  &--lead {
+    width: 340px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $primary;
+    padding: 30px 40px;
+
+    @include tablet {
+      width: 250px;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      padding-top: 19px;
+      padding-bottom: 19px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include mobile {
+      width: 288px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 39px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      display: block;
+      background-image: url("../img/svg/icon-arrow-bottom.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .btn-burger {
+  @include btn-reset;
   display: none;
+  position: relative;
+  outline: none;
 
   @include tablet {
     width: 72px;
@@ -23,10 +68,11 @@
 }
 
 .btn-cross {
-  display: none;
+  @include btn-reset;
+  position: relative;
+  outline: none;
 
   @include tablet {
-    display: block;
     width: 72px;
     height: 50px;
     position: absolute;
@@ -42,6 +88,6 @@
   }
 }
 
-.header__wrapper--nojs > .btn-cross {
+.header__container--nojs > .btn-cross {
   display: none;
 }

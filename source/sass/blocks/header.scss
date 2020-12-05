@@ -61,12 +61,12 @@
 
   &--open {
     @include tablet {
-      position: relative;
+      position: absolute;
+      min-width: 320px;
       display: flex;
       background-color: $background-primary;
-      margin-top: -50px;
       padding-top: 50px;
-      z-index: 1;
+      padding-bottom: 50px;
     }
   }
 

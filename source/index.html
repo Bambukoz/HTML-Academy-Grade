@@ -25,10 +25,10 @@
             <use xlink:href="img/sprite.svg#logo"></use>
           </svg>
         </a>
-        <button class="btn btn-burger js-btn-open" type="button" aria-label="Открыть меню"></button>
+        <button class="btn-burger js-btn-open" type="button" aria-label="Открыть меню"></button>
       </div>
       <div class="header__container header__container--nojs js-menu">
-        <button class="btn btn-cross js-btn-close" type="button" aria-label="Закрыть меню"></button>
+        <button class="btn-cross js-btn-close" type="button" aria-label="Закрыть меню"></button>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -50,9 +50,13 @@
   </header>
   <main class="page__main main">
     <section class="lead">
-      <h1 class="lead__title">Путешествие по Европе</h1>
-      <p class="lead__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-      <a class="btn lead__link" href="#tabs">Смотреть тур</a>
+      <div class="lead__wrapper lead__wrapper--top">
+        <h1 class="lead__title">Путешествие по Европе</h1>
+      </div>
+      <div class="lead__wrapper lead__wrapper--bottom">
+        <p class="lead__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+        <a class="btn btn--lead" href="#tabs">Смотреть тур</a>
+      </div>
     </section>
     <section class="cards" id="cards">
       <h2 class="cards__title">Места посещения</h2>
