@@ -1,0 +1,165 @@
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    padding-top: 80px;
+  }
+
+  @include mobile {
+    padding-top: 100px;
+  }
+}
+
+.cards__lead {
+  width: 100%;
+  max-width: 328px;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: 19.5%;
+  margin-bottom: 55px;
+
+  @include tablet {
+    width: 45%;
+    max-width: 450px;
+    min-width: 340px;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 39px;
+  }
+
+  @include mobile {
+    width: 90%;
+    min-width: 288px;
+    margin-bottom: 18px;
+  }
+}
+
+.cards__title {
+  @include style-reset;
+  width: 328px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.245px;
+  color: $color-text-dark;
+  margin-bottom: 31px;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: normal;
+    margin-bottom: 21px;
+    text-align: center;
+  }
+
+  @include mobile {
+    width: 288px;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 70.09%;
+    height: 4px;
+    background-color: $primary;
+    margin-top: 29px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.cards__text {
+  @include style-reset;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.466667px;
+
+  @include tablet {
+    text-align: center;
+  }
+}
+
+.cards__list {
+  @include list-reset;
+  width: 61%;
+  min-width: 767px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 102px;
+  column-gap: 5%;
+
+  @include tablet {
+    width: 82%;
+    min-width: 320px;
+    row-gap: 20px;
+    justify-content: center;
+  }
+
+  @include mobile {
+    row-gap: 35px;
+  }
+}
+
+.cards__item {
+  width: 350px;
+
+  // Ребята, простите, но я жулик
+  @media (min-width: 1920px) and (max-width: 1920px) {
+    &:nth-child(4) {
+      margin-left: 112px;
+    }
+
+    &:nth-child(5) {
+      margin-right: 112px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 768px) {
+    &:nth-child(5) {
+      margin-top: 10px;
+    }
+  }
+
+  @include tablet {
+    width: 288px;
+  }
+}
+
+.cards__link {
+  display: block;
+  line-height: 0;
+  min-height: 100%;
+  position: relative;
+
+  & span {
+    position: absolute;
+    bottom: 0;
+    left: 68px;
+    width: 215px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.415px;
+    color: $color-text-dark;
+    background-color: $white;
+    padding: 16px 30px;
+
+    @include tablet {
+      left: 36px;
+    }
+  }
+}
