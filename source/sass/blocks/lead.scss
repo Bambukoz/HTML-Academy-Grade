@@ -8,6 +8,7 @@
   background-size: cover;
   padding-top: 186px;
   padding-bottom: 10px;
+  margin-bottom: 190px;
 
   @include retina {
     background-image: url("../img/jpg/bg-main-desktop@2x.jpg");
@@ -17,6 +18,7 @@
     min-height: 344px;
     padding-top: 60px;
     background-image: url("../img/jpg/bg-main-tablet@1x.jpg");
+    margin-bottom: 70px;
 
     @include retina {
       background-image: url("../img/jpg/bg-main-tablet@2x.jpg");
@@ -27,6 +29,7 @@
     min-height: auto;
     background-image: none;
     padding-top: 0;
+    margin-bottom: 90px;
   }
 }
 
