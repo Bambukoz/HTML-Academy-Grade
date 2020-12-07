@@ -65,7 +65,7 @@
       </div>
       <ul class="cards__list">
         <li class="cards__item">
-          <a class="cards__link" href="#description-grece">
+          <a class="cards__link" href="#description-grece" data-name="grece">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-grece@1x.webp, img/jpg/card-grece@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-grece-desktop@1x.webp, img/jpg/card-grece-desktop@2x.webp 2x">
@@ -76,7 +76,7 @@
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-albania">
+          <a class="cards__link" href="#description-albania" data-name="albania">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-albania@1x.webp, img/jpg/card-albania@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-albania-desktop@1x.webp, img/jpg/card-albania-desktop@2x.webp 2x">
@@ -87,7 +87,7 @@
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-macedonia">
+          <a class="cards__link" href="#description-macedonia" data-name="macedonia">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-macedonia@1x.webp, img/jpg/card-macedonia@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-macedonia-desktop@1x.webp, img/jpg/card-macedonia-desktop@2x.webp 2x">
@@ -98,7 +98,7 @@
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-montenegro">
+          <a class="cards__link" href="#description-montenegro" data-name="montenegro">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-montenegro@1x.webp, img/jpg/card-montenegro@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-montenegro-desktop@1x.webp, img/jpg/card-montenegro-desktop@2x.webp 2x">
@@ -109,7 +109,7 @@
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-croatia">
+          <a class="cards__link" href="#description-croatia" data-name="croatia">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-croatia@1x.webp, img/jpg/card-croatia@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-croatia-desktop@1x.webp, img/jpg/card-croatia-desktop@2x.webp 2x">
@@ -123,149 +123,191 @@
     </section>
     <section class="tabs" id="tabs">
       <h2 class="visually-hidden">Описание мест посещения</h2>
-      <div class="tabs__wrapper">
+      <div class="tabs__toggles-wrapper" draggable="true">
         <label class="tabs__label" aria-label="Греция">
-          <input class="tabs__input" type="radio" name="toggle" value="Греция" checked>
+          <input class="tabs__input" type="radio" name="toggle" value="Греция" data-value="grece" checked>
           <span class="tabs__input-text">Греция</span>
         </label>
         <label class="tabs__label" aria-label="Албания">
-          <input class="tabs__input" type="radio" name="toggle" value="Албания">
+          <input class="tabs__input" type="radio" name="toggle" value="Албания" data-value="albania">
           <span class="tabs__input-text">Албания</span>
         </label>
         <label class="tabs__label" aria-label="Македония">
-          <input class="tabs__input" type="radio" name="toggle" value="Македония">
+          <input class="tabs__input" type="radio" name="toggle" value="Македония" data-value="macedonia">
           <span class="tabs__input-text">Македония</span>
         </label>
         <label class="tabs__label" aria-label="Черногория">
-          <input class="tabs__input" type="radio" name="toggle" value="Черногория">
+          <input class="tabs__input" type="radio" name="toggle" value="Черногория" data-value="montenegro">
           <span class="tabs__input-text">Черногория</span>
         </label>
         <label class="tabs__label" aria-label="Хорватия">
-          <input class="tabs__input" type="radio" name="toggle" value="Хорватия">
+          <input class="tabs__input" type="radio" name="toggle" value="Хорватия" data-value="croatia">
           <span class="tabs__input-text">Хорватия</span>
         </label>
       </div>
-      <article class="tabs__item">
-        <div class="description" id="description-grece">
-          <h3 class="description__title">Греция</h3>
-          <p class="description__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600
-            метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-          <button class="btn buy-btn" type="button">Купить тур сейчас</button>
-        </div>
-        <div class="photo">
-          <picture>
-            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-grece@1x.webp, img/jpg/photo-grece@2x.webp 2x">
-            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-grece-tablet@1x.webp, img/jpg/photo-grece-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-grece-desktop@1x.webp, img/jpg/photo-grece-desktop@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="img/jpg/photo-grece@1x.jpg, img/jpg/photo-grece@2x.jpg 2x">
-            <source media="(max-width: 1023px)" srcset="img/jpg/photo-grece-tablet@1x.jpg, img/jpg/photo-grece-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-grece-desktop@1x.jpg" srcset="img/jpg/photo-grece-desktop@2x.jpg 2x" alt="Вилла на скале - Греция" loading="lazy">
-          </picture>
-        </div>
-        <div class="reviews">
-          <h3 class="reviews__title">Отзывы</h3>
-          <blockquote class="reviews__item">
-            <p class="reviews__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
-            <cite class="reviews__author">Влада Голицина</cite>
-          </blockquote>
-        </div>
-      </article>
-      <article class="tabs__item">
-        <div class="description" id="description-albania">
-          <h3 class="description__title">Албания</h3>
-          <p class="description__text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния. </p>
-          <button class="btn buy-btn" type="button">Купить тур сейчас</button>
-        </div>
-        <div class="photo">
-          <picture>
-            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-albania@1x.webp, img/jpg/photo-albania@2x.webp 2x">
-            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-albania-tablet@1x.webp, img/jpg/photo-albania-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-albania-desktop@1x.webp, img/jpg/photo-albania-desktop@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="img/jpg/photo-albania@1x.jpg, img/jpg/photo-albania@2x.jpg 2x">
-            <source media="(max-width: 1023px)" srcset="img/jpg/photo-albania-tablet@1x.jpg, img/jpg/photo-albania-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-albania-desktop@1x.jpg" srcset="img/jpg/photo-albania-desktop@2x.jpg 2x" alt="Пляж, море - Албания" loading="lazy">
-          </picture>
-        </div>
-        <div class="reviews">
-          <h3 class="reviews__title">Отзывы</h3>
-          <blockquote class="reviews__item">
-            <p class="reviews__text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
-            <cite class="reviews__author">Маришка</cite>
-          </blockquote>
-        </div>
-      </article>
-      <article class="tabs__item">
-        <div class="description" id="description-macedonia">
-          <h3 class="description__title">Македония</h3>
-          <p class="description__text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
-          <button class="btn buy-btn" type="button">Купить тур сейчас</button>
-        </div>
-        <div class="photo">
-          <picture>
-            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-macedonia@1x.webp, img/jpg/photo-macedonia@2x.webp 2x">
-            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-macedonia-tablet@1x.webp, img/jpg/photo-macedonia-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-macedonia-desktop@1x.webp, img/jpg/photo-macedonia-desktop@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="img/jpg/photo-macedonia@1x.jpg, img/jpg/photo-macedonia@2x.jpg 2x">
-            <source media="(max-width: 1023px)" srcset="img/jpg/photo-macedonia-tablet@1x.jpg, img/jpg/photo-macedonia-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-macedonia-desktop@1x.jpg" srcset="img/jpg/photo-macedonia-desktop@2x.jpg 2x" alt="Церковь на фоне моря - Македония" loading="lazy">
-          </picture>
-        </div>
-        <div class="reviews">
-          <h3 class="reviews__title">Отзывы</h3>
-          <blockquote class="reviews__item">
-            <p class="reviews__text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
-            <cite class="reviews__author">Михаил Кузьмин</cite>
-          </blockquote>
-        </div>
-      </article>
-      <article class="tabs__item">
-        <div class="description" id="description-montenegro">
-          <h3 class="description__title">Черногория</h3>
-          <p class="description__text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км. </p>
-          <button class="btn buy-btn" type="button">Купить тур сейчас</button>
-        </div>
-        <div class="photo">
-          <picture>
-            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-montenegro@1x.webp, img/jpg/photo-montenegro@2x.webp 2x">
-            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-montenegro-tablet@1x.webp, img/jpg/photo-montenegro-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-montenegro-desktop@1x.webp, img/jpg/photo-montenegro-desktop@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="img/jpg/photo-montenegro@1x.jpg, img/jpg/photo-montenegro@2x.jpg 2x">
-            <source media="(max-width: 1023px)" srcset="img/jpg/photo-montenegro-tablet@1x.jpg, img/jpg/photo-montenegro-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-montenegro-desktop@1x.jpg" srcset="img/jpg/photo-montenegro-desktop@2x.jpg 2x" alt="Горная река и лес - Черногория" loading="lazy">
-          </picture>
-        </div>
-        <div class="reviews">
-          <h3 class="reviews__title">Отзывы</h3>
-          <blockquote class="reviews__item">
-            <p class="reviews__text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
-            <cite class="reviews__author">Анастасия Мей</cite>
-          </blockquote>
-        </div>
-      </article>
-      <article class="tabs__item">
-        <div class="description" id="description-croatia">
-          <h3 class="description__title">Хорватия</h3>
-          <p class="description__text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-          <button class="btn buy-btn" type="button">Купить тур сейчас</button>
-        </div>
-        <div class="photo">
-          <picture>
-            <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-croatia@1x.webp, img/jpg/photo-croatia@2x.webp 2x">
-            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-croatia-tablet@1x.webp, img/jpg/photo-croatia-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/jpg/photo-croatia-desktop@1x.webp, img/jpg/photo-croatia-desktop@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="img/jpg/photo-croatia@1x.jpg, img/jpg/photo-croatia@2x.jpg 2x">
-            <source media="(max-width: 1023px)" srcset="img/jpg/photo-croatia-tablet@1x.jpg, img/jpg/photo-croatia-tablet@2x.jpg 2x">
-            <img src="img/jpg/photo-croatia-desktop@1x.jpg" srcset="img/jpg/photo-croatia-desktop@2x.jpg 2x" alt="Пещеры - Хорватия" loading="lazy">
-          </picture>
-        </div>
-        <div class="reviews">
-          <h3 class="reviews__title">Отзывы</h3>
-          <blockquote class="reviews__item">
-            <p class="reviews__text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
-            <cite class="reviews__author">Владимир Мулицин</cite>
-          </blockquote>
-        </div>
-      </article>
+      <div class="tabs__wrapper js-tabs-list">
+        <article class="tabs__item tabs__item--active" data-name="grece">
+          <div class="tabs__description" id="description-grece">
+            <h3 class="tabs__title">Греция</h3>
+            <p class="tabs__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров,
+              наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
+            <button class="btn btn--buy" type="button">Купить тур сейчас</button>
+          </div>
+          <div class="tabs__reviews-wrapper">
+            <div class="tabs__photo">
+              <picture>
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-grece@1x.webp, img/jpg/photo-grece@2x.webp 2x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-grece-tablet@1x.webp, img/jpg/photo-grece-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-grece-desktop@1x.webp, img/jpg/photo-grece-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/jpg/photo-grece@1x.jpg, img/jpg/photo-grece@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/jpg/photo-grece-tablet@1x.jpg, img/jpg/photo-grece-tablet@2x.jpg 2x">
+                <img src="img/jpg/photo-grece-desktop@1x.jpg" srcset="img/jpg/photo-grece-desktop@2x.jpg 2x" alt="Вилла на скале - Греция" loading="lazy">
+              </picture>
+            </div>
+            <div class="tabs__reviews">
+              <h3 class="tabs__reviews-title">Отзывы</h3>
+              <blockquote class="tabs__reviews-item">
+                <p class="tabs__reviews-text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
+                <div class="tabs__user-info">
+                  <picture>
+                    <source type="image/webp" srcset="img/png/photo-feedback.webp">
+                    <img src="img/png/photo-feedback.png" loading="lazy" alt="Аватар пользователя">
+                  </picture>
+                  <cite class="tabs__reviews-author">Влада Голицина</cite>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </article>
+        <article class="tabs__item" data-name="albania">
+          <div class="tabs__description" id="description-albania">
+            <h3 class="tabs__title">Албания</h3>
+            <p class="tabs__text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния. </p>
+            <button class="btn btn--buy" type="button">Купить тур сейчас</button>
+          </div>
+          <div class="tabs__reviews-wrapper">
+            <div class="tabs__photo">
+              <picture>
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-albania@1x.webp, img/jpg/photo-albania@2x.webp 2x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-albania-tablet@1x.webp, img/jpg/photo-albania-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-albania-desktop@1x.webp, img/jpg/photo-albania-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/jpg/photo-albania@1x.jpg, img/jpg/photo-albania@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/jpg/photo-albania-tablet@1x.jpg, img/jpg/photo-albania-tablet@2x.jpg 2x">
+                <img src="img/jpg/photo-albania-desktop@1x.jpg" srcset="img/jpg/photo-albania-desktop@2x.jpg 2x" alt="Пляж, море - Албания" loading="lazy">
+              </picture>
+            </div>
+            <div class="tabs__reviews">
+              <h3 class="tabs__reviews-title">Отзывы</h3>
+              <blockquote class="tabs__reviews-item">
+                <p class="tabs__reviews-text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
+                <div class="tabs__user-info">
+                  <picture>
+                    <source type="image/webp" srcset="img/png/photo-feedback-2.webp">
+                    <img src="img/png/photo-feedback-2.png" loading="lazy" alt="Аватар пользователя">
+                  </picture>
+                  <cite class="tabs__reviews-author">Маришка</cite>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </article>
+        <article class="tabs__item" data-name="macedonia">
+          <div class="tabs__description" id="description-macedonia">
+            <h3 class="tabs__title">Македония</h3>
+            <p class="tabs__text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
+            <button class="btn btn--buy" type="button">Купить тур сейчас</button>
+          </div>
+          <div class="tabs__reviews-wrapper">
+            <div class="tabs__photo">
+              <picture>
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-macedonia@1x.webp, img/jpg/photo-macedonia@2x.webp 2x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-macedonia-tablet@1x.webp, img/jpg/photo-macedonia-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-macedonia-desktop@1x.webp, img/jpg/photo-macedonia-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/jpg/photo-macedonia@1x.jpg, img/jpg/photo-macedonia@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/jpg/photo-macedonia-tablet@1x.jpg, img/jpg/photo-macedonia-tablet@2x.jpg 2x">
+                <img src="img/jpg/photo-macedonia-desktop@1x.jpg" srcset="img/jpg/photo-macedonia-desktop@2x.jpg 2x" alt="Церковь на фоне моря - Македония" loading="lazy">
+              </picture>
+            </div>
+            <div class="tabs__reviews">
+              <h3 class="tabs__reviews-title">Отзывы</h3>
+              <blockquote class="tabs__reviews-item">
+                <p class="tabs__reviews-text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
+                <div class="tabs__user-info">
+                  <picture>
+                    <source type="image/webp" srcset="img/png/photo-feedback-3.webp">
+                    <img src="img/png/photo-feedback-3.png" loading="lazy" alt="Аватар пользователя">
+                  </picture>
+                  <cite class="tabs__reviews-author">Михаил Кузьмин</cite>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </article>
+        <article class="tabs__item" data-name="montenegro">
+          <div class="tabs__description" id="description-montenegro">
+            <h3 class="tabs__title">Черногория</h3>
+            <p class="tabs__text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км. </p>
+            <button class="btn btn--buy" type="button">Купить тур сейчас</button>
+          </div>
+          <div class="tabs__reviews-wrapper">
+            <div class="tabs__photo">
+              <picture>
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-montenegro@1x.webp, img/jpg/photo-montenegro@2x.webp 2x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-montenegro-tablet@1x.webp, img/jpg/photo-montenegro-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-montenegro-desktop@1x.webp, img/jpg/photo-montenegro-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/jpg/photo-montenegro@1x.jpg, img/jpg/photo-montenegro@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/jpg/photo-montenegro-tablet@1x.jpg, img/jpg/photo-montenegro-tablet@2x.jpg 2x">
+                <img src="img/jpg/photo-montenegro-desktop@1x.jpg" srcset="img/jpg/photo-montenegro-desktop@2x.jpg 2x" alt="Горная река и лес - Черногория" loading="lazy">
+              </picture>
+            </div>
+            <div class="tabs__reviews">
+              <h3 class="tabs__reviews-title">Отзывы</h3>
+              <blockquote class="tabs__reviews-item">
+                <p class="tabs__reviews-text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
+                <div class="tabs__user-info">
+                  <picture>
+                    <source type="image/webp" srcset="img/png/photo-feedback-4.webp">
+                    <img src="img/png/photo-feedback-4.png" loading="lazy" alt="Аватар пользователя">
+                  </picture>
+                  <cite class="tabs__reviews-author">Анастасия Мей</cite>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </article>
+        <article class="tabs__item" data-name="croatia">
+          <div class="tabs__description" id="description-croatia">
+            <h3 class="tabs__title">Хорватия</h3>
+            <p class="tabs__text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
+            <button class="btn btn--buy" type="button">Купить тур сейчас</button>
+          </div>
+          <div class="tabs__reviews-wrapper">
+            <div class="tabs__photo">
+              <picture>
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/jpg/photo-croatia@1x.webp, img/jpg/photo-croatia@2x.webp 2x">
+                <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/photo-croatia-tablet@1x.webp, img/jpg/photo-croatia-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/jpg/photo-croatia-desktop@1x.webp, img/jpg/photo-croatia-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/jpg/photo-croatia@1x.jpg, img/jpg/photo-croatia@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="img/jpg/photo-croatia-tablet@1x.jpg, img/jpg/photo-croatia-tablet@2x.jpg 2x">
+                <img src="img/jpg/photo-croatia-desktop@1x.jpg" srcset="img/jpg/photo-croatia-desktop@2x.jpg 2x" alt="Пещеры - Хорватия" loading="lazy">
+              </picture>
+            </div>
+            <div class="tabs__reviews">
+              <h3 class="tabs__reviews-title">Отзывы</h3>
+              <blockquote class="tabs__reviews-item">
+                <p class="tabs__reviews-text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
+                <div class="tabs__user-info">
+                  <picture>
+                    <source type="image/webp" srcset="img/png/photo-feedback-5.webp">
+                    <img src="img/png/photo-feedback-5.png" loading="lazy" alt="Аватар пользователя">
+                  </picture>
+                  <cite class="tabs__reviews-author">Владимир Мулицин</cite>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
     <section class="prices" id="prices">
       <div class="prices__lead">
@@ -297,7 +339,7 @@
             <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
           </li>
         </ul>
-        <button class="btn buy-btn" type="button">Купить тур сейчас</button>
+        <button class="btn btn--buy" type="button">Купить тур сейчас</button>
       </div>
       <div class="price-card price-card--economy">
         <h2 class="price-card__title">Экономный</h2>
@@ -317,7 +359,7 @@
             <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
           </li>
         </ul>
-        <button class="btn buy-btn" type="button">Купить тур сейчас</button>
+        <button class="btn btn--buy" type="button">Купить тур сейчас</button>
       </div>
     </section>
     <section class="feedback">
@@ -330,7 +372,7 @@
         <label class="form__label" aria-label="Введите e-mail">
           <input class="form__input" name="user-email" type="email">
         </label>
-        <button class="btn submit-btn" type="submit">Отправить</button>
+        <button class="btn btn--submit" type="submit">Отправить</button>
       </form>
     </section>
   </main>
@@ -435,7 +477,7 @@
       <label class="form__label" aria-label="Введите e-mail">
         <input class="form__input" name="user-email" type="email">
       </label>
-      <button class="btn submit-btn" type="submit">Отправить</button>
+      <button class="btn btn--submit" type="submit">Отправить</button>
     </form>
   </div>
   <script src="js/script.js"></script>

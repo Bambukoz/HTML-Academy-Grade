@@ -3,27 +3,30 @@
   display: block;
   position: relative;
   outline: none;
+  background-color: $primary;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white;
+  padding: 30px 40px;
+
+  @include tablet {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &--lead {
     width: 340px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: $white;
-    background-color: $primary;
-    padding: 30px 40px;
 
     @include tablet {
       width: 250px;
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 12px;
-      padding-top: 19px;
-      padding-bottom: 19px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     @include mobile {
@@ -42,6 +45,16 @@
       background-image: url("../img/svg/icon-arrow-bottom.svg");
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+
+  &--buy {
+    width: 250px;
+    padding-left: 39px;
+    padding-right: 39px;
+
+    @include mobile {
+      width: 288px;
     }
   }
 }
