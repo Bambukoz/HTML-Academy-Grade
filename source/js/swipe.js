@@ -10,7 +10,6 @@
     window.navigator.msMaxTouchPoints > 0;
 
   list.addEventListener(`mousedown`, (evt) => {
-    evt.preventDefault();
     let shiftX = evt.clientX - list.getBoundingClientRect().left;
 
     const onMouseMoove = (mooveEvt) => {
@@ -30,7 +29,6 @@
   if (isTouchCapable) {
     list.addEventListener(`touchstart`, (touchEvt) => {
 
-      touchEvt.preventDefault();
       let shiftX = touchEvt.touches[0].clientX - list.getBoundingClientRect().left;
 
       const onMouseMoove = (moveTouchEvt) => {

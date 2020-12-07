@@ -175,6 +175,12 @@
   left: 0;
   background-color: $color-text-darkest-05;
   padding: 175px 42px;
+
+  @include tablet {
+    display: block;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 .cards__item:hover .cards__link {
