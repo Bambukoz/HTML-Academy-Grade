@@ -65,7 +65,7 @@
       </div>
       <ul class="cards__list">
         <li class="cards__item">
-          <a class="cards__link" href="#description-grece" data-name="grece">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-grece@1x.webp, img/jpg/card-grece@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-grece-desktop@1x.webp, img/jpg/card-grece-desktop@2x.webp 2x">
@@ -73,10 +73,14 @@
               <img src="img/jpg/card-grece-desktop@1x.jpg" srcset="img/jpg/card-grece-desktop@2x.jpg 2x" alt=" Вилла на скале - Греция" loading="lazy">
             </picture>
             <span class="cards__sticker">Греция</span>
+            <a class="cards__link" href="#description-grece" data-name="grece">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-albania" data-name="albania">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-albania@1x.webp, img/jpg/card-albania@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-albania-desktop@1x.webp, img/jpg/card-albania-desktop@2x.webp 2x">
@@ -84,10 +88,14 @@
               <img src="img/jpg/card-albania-desktop@1x.jpg" srcset="img/jpg/card-albania-desktop@2x.jpg 2x" alt="Пляж, море - Албания" loading="lazy">
             </picture>
             <span class="cards__sticker">Албания</span>
+            <a class="cards__link" href="#description-albania" data-name="albania">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-macedonia" data-name="macedonia">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-macedonia@1x.webp, img/jpg/card-macedonia@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-macedonia-desktop@1x.webp, img/jpg/card-macedonia-desktop@2x.webp 2x">
@@ -95,10 +103,14 @@
               <img src="img/jpg/card-macedonia-desktop@1x.jpg" srcset="img/jpg/card-macedonia-desktop@2x.jpg 2x" alt="Церковь на фоне моря - Македония" loading="lazy">
             </picture>
             <span class="cards__sticker">Македония</span>
+            <a class="cards__link" href="#description-macedonia" data-name="macedonia">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-montenegro" data-name="montenegro">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-montenegro@1x.webp, img/jpg/card-montenegro@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-montenegro-desktop@1x.webp, img/jpg/card-montenegro-desktop@2x.webp 2x">
@@ -106,10 +118,14 @@
               <img src="img/jpg/card-montenegro-desktop@1x.jpg" srcset="img/jpg/card-montenegro-desktop@2x.jpg 2x" alt="Горная река и лес - Черногория" loading="lazy">
             </picture>
             <span class="cards__sticker">Черногория</span>
+            <a class="cards__link" href="#description-montenegro" data-name="montenegro">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-croatia" data-name="croatia">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-croatia@1x.webp, img/jpg/card-croatia@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-croatia-desktop@1x.webp, img/jpg/card-croatia-desktop@2x.webp 2x">
@@ -117,13 +133,17 @@
               <img src="img/jpg/card-croatia-desktop@1x.jpg" srcset="img/jpg/card-croatia-desktop@2x.jpg 2x" alt="Пещеры - Хорватия" loading="lazy">
             </picture>
             <span class="cards__sticker">Хорватия</span>
+            <a class="cards__link" href="#description-croatia" data-name="croatia">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
       </ul>
     </section>
     <section class="tabs" id="tabs">
       <h2 class="visually-hidden">Описание мест посещения</h2>
-      <div class="tabs__toggles-wrapper" draggable="true">
+      <div class="tabs__toggles-wrapper">
         <label class="tabs__label" aria-label="Греция">
           <input class="tabs__input" type="radio" name="toggle" value="Греция" data-value="grece" checked>
           <span class="tabs__input-text">Греция</span>
@@ -481,6 +501,7 @@
     </form>
   </div>
   <script src="js/script.js"></script>
+  <script src="js/swipe.js"></script>
 </body>
 
 </html>

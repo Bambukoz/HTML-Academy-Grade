@@ -29,9 +29,14 @@
   const tabClass = {
     ACTIVE: `tabs__item--active`
   };
+  const cardsList = document.querySelector(`.cards__list`);
+  const cardClass = {
+    LINK: `cards__link`
+  };
   const tabSection = document.querySelector(`#tabs`);
   const tabToggles = Array.from(tabSection.querySelectorAll(`input[type=radio]`));
   const tabList = Array.from(tabSection.querySelectorAll(`.tabs__item`));
+
 
   const showActiveTab = (target) => {
     for (let tab of tabList) {
@@ -51,5 +56,16 @@
     }
   };
 
+  const onCardClick = (evt) => {
+    if (evt.target.classList.contains(cardClass.LINK)) {
+      const card = evt.target;
+      for (let toggle of tabToggles) {
+        showActiveTab(card.dataset.name);
+        toggle.checked = true;
+      }
+    }
+  };
+
+  cardsList.addEventListener(`click`, onCardClick);
   tabSection.addEventListener(`change`, onToggleChange);
 })();
