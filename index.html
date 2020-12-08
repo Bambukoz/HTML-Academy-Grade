@@ -332,7 +332,7 @@
     <section class="prices" id="prices">
       <div class="prices__lead">
         <h2 class="prices__title">Цены</h2>
-        <p class="prices__text">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
+        <p class="prices__text">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
         <div class="contact-us contact-us--prices">
           <p class="contact-us__text">Свяжитесь с нами</p>
           <div class="contact-us__wrapper">
@@ -421,17 +421,31 @@
       </div>
     </section>
     <section class="feedback">
-      <h2 class="feedback__title">У Вас остались вопросы?</h2>
-      <p class="feedback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-      <form class="form" action="https://echo.htmlacademy.ru" method="get">
-        <label class="form__label" aria-label="Введите номер мобильного телефона">
-          <input class="form__input" name="mobile-number" type="tel" pattern="[0-9]{10}" minlength="10" placeholder="Введите 10 цифр номера" required>
-        </label>
-        <label class="form__label" aria-label="Введите e-mail">
-          <input class="form__input" name="user-email" type="email">
-        </label>
-        <button class="btn btn--submit" type="submit">Отправить</button>
-      </form>
+      <div class="feedback__wrapper">
+        <div class="feedback__photo">
+          <picture>
+            <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/bg-question-tablet@1x.webp, img/jpg/bg-question-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/jpg/bg-question-desktop@1x.webp, img/jpg/bg-question-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/jpg/bg-question-tablet@1x.jpg, img/jpg/bg-question-tablet@2x.jpg 2x">
+            <img src="img/jpg/bg-question-desktop@1x.jpg" srcset="img/jpg/bg-question-desktop@2x.jpg 2x" alt="Море на оранжевом закате" loading="lazy">
+          </picture>
+        </div>
+        <div class="feedback__inner">
+          <h2 class="feedback__title">У Вас остались вопросы?</h2>
+          <p class="feedback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+          <form class="form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="form__label form__label--tel" aria-label="Введите номер мобильного телефона">
+              <input class="form__input" name="mobile-number" type="tel" pattern="[0-9]{10}" minlength="10" placeholder="Введите 10 цифр номера" required>
+              <span class="form__error">Данные не верны</span>
+            </label>
+            <label class="form__label" aria-label="Введите e-mail">
+              <input class="form__input form__input--email" name="user-email" type="email" placeholder="E-mail">
+              <span class="form__error">Данные не верны</span>
+            </label>
+            <button class="btn btn--submit" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="page__footer footer">
