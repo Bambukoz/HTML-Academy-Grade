@@ -37,7 +37,7 @@
   },
   "browserslist": [
     "last 4 versions",
-    "Firefox ESR",
+    "Firefox ESR"
   ],
   "editorconfig-cli": [
     "*.json",

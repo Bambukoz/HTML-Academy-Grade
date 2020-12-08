@@ -73,6 +73,20 @@
       width: 288px;
     }
   }
+
+  &--card-buy {
+    width: 310px;
+    padding-left: 39px;
+    padding-right: 39px;
+    margin-top: auto;
+
+    @include tablet {
+      width: 291px;
+      position: absolute;
+      bottom: -4px;
+      left: -3px;
+    }
+  }
 }
 
 .btn-burger {
@@ -117,6 +131,6 @@
   }
 }
 
-.header__container--nojs>.btn-cross {
+.header__container--nojs > .btn-cross {
   display: none;
 }

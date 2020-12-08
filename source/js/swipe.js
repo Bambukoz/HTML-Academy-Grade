@@ -14,7 +14,7 @@
 
     const onMouseMoove = (mooveEvt) => {
       let newLeft = mooveEvt.clientX - shiftX - container.getBoundingClientRect().left;
-      list.style.transform = newLeft + `px`;
+      list.style.left = newLeft + `px`;
     };
 
     const onMouseUp = () => {

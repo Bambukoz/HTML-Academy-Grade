@@ -7,6 +7,47 @@
   @include tablet {
     display: none;
   }
+
+  &--prices {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 0;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.contact-us__text {
+  @include style-reset;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: end;
+  color: $color-text-darkest;
+  margin-bottom: 12px;
+  margin-right: 35px;
+
+  @include tablet {
+    font-size: 18px;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.contact-us__wrapper {
+  position: relative;
+  width: 253px;
+  margin-right: 38px;
+
+  @include tablet {
+    width: 188px;
+    margin-right: 0;
+  }
 }
 
 .contact-us__icon-phone {
@@ -15,6 +56,17 @@
   transform: translateY(-50%);
   left: 0;
   fill: none;
+  stroke: $color-text-darkest;
+
+  &--prices {
+    top: 15px;
+    left: -6px;
+    stroke: $secondary;
+
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 .contact-us__tel {
@@ -24,4 +76,23 @@
   line-height: 32px;
   text-decoration: underline;
   padding-left: 39px;
+
+  &--prices {
+    width: 248px;
+    font-size: 20px;
+    line-height: 32px;
+    color: $black;
+    padding-left: 44px;
+    text-decoration: none;
+
+    @include tablet {
+      width: 188px;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: underline;
+      color: $primary;
+      padding-left: 0;
+      margin-right: 0;
+    }
+  }
 }

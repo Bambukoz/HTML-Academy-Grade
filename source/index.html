@@ -332,54 +332,92 @@
     <section class="prices" id="prices">
       <div class="prices__lead">
         <h2 class="prices__title">Цены</h2>
-        <p class="prices__text">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
+        <p class="prices__text">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
         <div class="contact-us contact-us--prices">
           <p class="contact-us__text">Свяжитесь с нами</p>
-          <svg class="contact-us__icon-phone" width="30" height="30">
-            <use xlink:href="img/sprite.svg#icon-phone"></use>
-          </svg>
-          <a class="contact-us__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          <div class="contact-us__wrapper">
+            <svg class="contact-us__icon-phone contact-us__icon-phone--prices" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            <a class="contact-us__tel contact-us__tel--prices" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          </div>
         </div>
       </div>
-      <div class="price-card price-card--complex">
-        <h2 class="price-card__title">Комплексный</h2>
-        <span class="price-card__price">$1999</span>
-        <p class="price-card__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-        <ul class="price-card__list">
-          <li class="price-card__item">
-            <p class="price-card__item-text">Разработанный маршрут с гидом группы</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Перелет, трансфер и проживание в отелях</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Завтраки, ужины в отелях и ланчи на природе</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
-          </li>
-        </ul>
-        <button class="btn btn--buy" type="button">Купить тур сейчас</button>
-      </div>
-      <div class="price-card price-card--economy">
-        <h2 class="price-card__title">Экономный</h2>
-        <span class="price-card__price">$1399</span>
-        <p class="price-card__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-        <ul class="price-card__list">
-          <li class="price-card__item">
-            <p class="price-card__item-text">Перелет и трансфер</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Проживание в хостелах при отелях</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Только завтраки в отелях</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
-          </li>
-        </ul>
-        <button class="btn btn--buy" type="button">Купить тур сейчас</button>
+      <div class="prices__inner">
+        <div class="price-card price-card--complex">
+          <div class="price-card__wrapper price-card__wrapper--complex">
+            <h2 class="price-card__title price-card__title--complex">Комплексный</h2>
+            <span class="price-card__price price-card__price--complex">$1999</span>
+          </div>
+          <p class="price-card__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+          <ul class="price-card__list price-card__list--complex">
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Разработанный маршрут с гидом группы</p>
+            </li>
+            <li class="price-card__item price-card__item--second">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Перелет, трансфер и проживание в отелях</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Завтраки, ужины в отелях и ланчи на природе</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
+            </li>
+          </ul>
+          <button class="btn btn--card-buy" type="button">Купить тур сейчас</button>
+        </div>
+        <div class="price-card price-card--economy">
+          <div class="price-card__wrapper">
+            <h2 class="price-card__title">Экономный</h2>
+            <span class="price-card__price">$1399</span>
+          </div>
+          <p class="price-card__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+          <ul class="price-card__list">
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Разработанный маршрут с гидом группы</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Перелет и трансфер</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Проживание в хостелах при отелях</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Только завтраки в отелях</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
+            </li>
+          </ul>
+          <button class="btn btn--card-buy" type="button">Купить тур сейчас</button>
+        </div>
       </div>
     </section>
     <section class="feedback">
