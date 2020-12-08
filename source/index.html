@@ -65,7 +65,7 @@
       </div>
       <ul class="cards__list">
         <li class="cards__item">
-          <a class="cards__link" href="#description-grece" data-name="grece">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-grece@1x.webp, img/jpg/card-grece@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-grece-desktop@1x.webp, img/jpg/card-grece-desktop@2x.webp 2x">
@@ -73,10 +73,14 @@
               <img src="img/jpg/card-grece-desktop@1x.jpg" srcset="img/jpg/card-grece-desktop@2x.jpg 2x" alt=" Вилла на скале - Греция" loading="lazy">
             </picture>
             <span class="cards__sticker">Греция</span>
+            <a class="cards__link" href="#description-grece" data-name="grece">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-albania" data-name="albania">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-albania@1x.webp, img/jpg/card-albania@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-albania-desktop@1x.webp, img/jpg/card-albania-desktop@2x.webp 2x">
@@ -84,10 +88,14 @@
               <img src="img/jpg/card-albania-desktop@1x.jpg" srcset="img/jpg/card-albania-desktop@2x.jpg 2x" alt="Пляж, море - Албания" loading="lazy">
             </picture>
             <span class="cards__sticker">Албания</span>
+            <a class="cards__link" href="#description-albania" data-name="albania">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-macedonia" data-name="macedonia">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-macedonia@1x.webp, img/jpg/card-macedonia@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-macedonia-desktop@1x.webp, img/jpg/card-macedonia-desktop@2x.webp 2x">
@@ -95,10 +103,14 @@
               <img src="img/jpg/card-macedonia-desktop@1x.jpg" srcset="img/jpg/card-macedonia-desktop@2x.jpg 2x" alt="Церковь на фоне моря - Македония" loading="lazy">
             </picture>
             <span class="cards__sticker">Македония</span>
+            <a class="cards__link" href="#description-macedonia" data-name="macedonia">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-montenegro" data-name="montenegro">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-montenegro@1x.webp, img/jpg/card-montenegro@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-montenegro-desktop@1x.webp, img/jpg/card-montenegro-desktop@2x.webp 2x">
@@ -106,10 +118,14 @@
               <img src="img/jpg/card-montenegro-desktop@1x.jpg" srcset="img/jpg/card-montenegro-desktop@2x.jpg 2x" alt="Горная река и лес - Черногория" loading="lazy">
             </picture>
             <span class="cards__sticker">Черногория</span>
+            <a class="cards__link" href="#description-montenegro" data-name="montenegro">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
         <li class="cards__item">
-          <a class="cards__link" href="#description-croatia" data-name="croatia">
+          <div class="cards__photo-wrapper">
             <picture>
               <source media="(max-width: 1023px)" type="image/webp" srcset="img/jpg/card-croatia@1x.webp, img/jpg/card-croatia@2x.webp 2x">
               <source type="image/webp" srcset="img/jpg/card-croatia-desktop@1x.webp, img/jpg/card-croatia-desktop@2x.webp 2x">
@@ -117,13 +133,17 @@
               <img src="img/jpg/card-croatia-desktop@1x.jpg" srcset="img/jpg/card-croatia-desktop@2x.jpg 2x" alt="Пещеры - Хорватия" loading="lazy">
             </picture>
             <span class="cards__sticker">Хорватия</span>
+            <a class="cards__link" href="#description-croatia" data-name="croatia">
+              <span class="btn btn--link">Смотреть подробнее</span>
+            </a>
+          </div>
           </a>
         </li>
       </ul>
     </section>
     <section class="tabs" id="tabs">
       <h2 class="visually-hidden">Описание мест посещения</h2>
-      <div class="tabs__toggles-wrapper" draggable="true">
+      <div class="tabs__toggles-wrapper">
         <label class="tabs__label" aria-label="Греция">
           <input class="tabs__input" type="radio" name="toggle" value="Греция" data-value="grece" checked>
           <span class="tabs__input-text">Греция</span>
@@ -312,54 +332,92 @@
     <section class="prices" id="prices">
       <div class="prices__lead">
         <h2 class="prices__title">Цены</h2>
-        <p class="prices__text">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
+        <p class="prices__text">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
         <div class="contact-us contact-us--prices">
           <p class="contact-us__text">Свяжитесь с нами</p>
-          <svg class="contact-us__icon-phone" width="30" height="30">
-            <use xlink:href="img/sprite.svg#icon-phone"></use>
-          </svg>
-          <a class="contact-us__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          <div class="contact-us__wrapper">
+            <svg class="contact-us__icon-phone contact-us__icon-phone--prices" width="30" height="30">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            <a class="contact-us__tel contact-us__tel--prices" href="tel:+749978468446">+7 (499) -784-684-46</a>
+          </div>
         </div>
       </div>
-      <div class="price-card price-card--complex">
-        <h2 class="price-card__title">Комплексный</h2>
-        <span class="price-card__price">$1999</span>
-        <p class="price-card__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-        <ul class="price-card__list">
-          <li class="price-card__item">
-            <p class="price-card__item-text">Разработанный маршрут с гидом группы</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Перелет, трансфер и проживание в отелях</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Завтраки, ужины в отелях и ланчи на природе</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
-          </li>
-        </ul>
-        <button class="btn btn--buy" type="button">Купить тур сейчас</button>
-      </div>
-      <div class="price-card price-card--economy">
-        <h2 class="price-card__title">Экономный</h2>
-        <span class="price-card__price">$1399</span>
-        <p class="price-card__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-        <ul class="price-card__list">
-          <li class="price-card__item">
-            <p class="price-card__item-text">Перелет и трансфер</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Проживание в хостелах при отелях</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Только завтраки в отелях</p>
-          </li>
-          <li class="price-card__item">
-            <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
-          </li>
-        </ul>
-        <button class="btn btn--buy" type="button">Купить тур сейчас</button>
+      <div class="prices__inner">
+        <div class="price-card price-card--complex">
+          <div class="price-card__wrapper price-card__wrapper--complex">
+            <h2 class="price-card__title price-card__title--complex">Комплексный</h2>
+            <span class="price-card__price price-card__price--complex">$1999</span>
+          </div>
+          <p class="price-card__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+          <ul class="price-card__list price-card__list--complex">
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Разработанный маршрут с гидом группы</p>
+            </li>
+            <li class="price-card__item price-card__item--second">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Перелет, трансфер и проживание в отелях</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Завтраки, ужины в отелях и ланчи на природе</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
+            </li>
+          </ul>
+          <button class="btn btn--card-buy" type="button">Купить тур сейчас</button>
+        </div>
+        <div class="price-card price-card--economy">
+          <div class="price-card__wrapper">
+            <h2 class="price-card__title">Экономный</h2>
+            <span class="price-card__price">$1399</span>
+          </div>
+          <p class="price-card__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+          <ul class="price-card__list">
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Разработанный маршрут с гидом группы</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Перелет и трансфер</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Проживание в хостелах при отелях</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Только завтраки в отелях</p>
+            </li>
+            <li class="price-card__item">
+              <svg class="price-card__icon" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+              <p class="price-card__item-text">Экскурсии по удивительно красивым местам Европы</p>
+            </li>
+          </ul>
+          <button class="btn btn--card-buy" type="button">Купить тур сейчас</button>
+        </div>
       </div>
     </section>
     <section class="feedback">
@@ -481,6 +539,7 @@
     </form>
   </div>
   <script src="js/script.js"></script>
+  <script src="js/swipe.js"></script>
 </body>
 
 </html>
