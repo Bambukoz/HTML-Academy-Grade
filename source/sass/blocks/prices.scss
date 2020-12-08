@@ -6,13 +6,16 @@
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 10px;
+  margin-bottom: 128px;
 
   @include tablet {
     flex-direction: column;
+    margin-bottom: 116px;
   }
 
   @include mobile {
     padding-top: 10px;
+    margin-bottom: 14px;
   }
 }
 

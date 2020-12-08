@@ -1,0 +1,110 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    width: 90%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.form__label {
+  position: relative;
+  width: 48.3%;
+  margin-right: 19px;
+  margin-bottom: 25px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    width: 288px;
+    margin-bottom: 19px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--tel {
+    &::before {
+      content: "+7";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 26px;
+      width: 16px;
+      height: 14px;
+      font-size: 14px;
+      line-height: 17px;
+      color: $color-text-darkest;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      width: 6px;
+      height: 6px;
+      background-image: url("../img/svg/icon-required.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+
+    @include mobile {
+      margin-right: auto;
+    }
+  }
+}
+
+.form__error {
+  display: none;
+  position: absolute;
+  top: -15px;
+  left: 1px;
+  font-size: 12px;
+  line-height: 15px;
+  color: $primary;
+}
+
+.form__input {
+  width: 269px;
+  border: 1px solid $color-text-dark-03;
+  padding: 16px 10px 15px 50px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-text-darkest;
+  outline: none;
+
+  @include mobile {
+    width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-text-darkest;
+  }
+
+  &:invalid {
+    border-color: $primary;
+  }
+
+  &:invalid + .form__error {
+    display: block;
+  }
+
+  &--email {
+    padding-left: 14px;
+  }
+}

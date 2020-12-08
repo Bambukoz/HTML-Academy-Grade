@@ -245,7 +245,7 @@
   &--phone {
     top: -4px;
     fill: none;
-    opacity: 0.2;
+    stroke: $color-border;
 
     @include mobile {
       left: 18px;

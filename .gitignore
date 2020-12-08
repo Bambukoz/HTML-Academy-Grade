@@ -9,6 +9,7 @@ package-lock.json
 *.sublime*
 node_modules/
 build/
+.publish
 npm-debug.*
 source/css/*.css
 source/css/*.map
