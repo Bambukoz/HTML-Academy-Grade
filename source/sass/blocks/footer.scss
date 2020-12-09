@@ -1,12 +1,12 @@
 .footer {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 170px;
-  padding-bottom: 93px;
+  padding-top: 10px;
+  padding-bottom: 46px;
 
   @include tablet {
     min-width: 320px;
-    padding-top: 70px;
+    padding-bottom: 22px;
   }
 
   @include mobile {
@@ -232,6 +232,7 @@
 .footer__icon {
   position: absolute;
   left: 0;
+  fill: $color-border;
 
   &--email {
     top: 50%;
@@ -264,6 +265,13 @@
   @include tablet {
     padding-top: 2px;
   }
+
+  &:hover + .footer__icon,
+  &:focus + .footer__icon {
+    @include desktop {
+      fill: $primary;
+    }
+  }
 }
 
 .footer__email-email {
@@ -288,4 +296,11 @@
   padding-left: 41px;
   color: $primary;
   word-break: break-word;
+
+  &:hover + .footer__icon,
+  &:focus + .footer__icon {
+    @include desktop {
+      stroke: $primary;
+    }
+  }
 }

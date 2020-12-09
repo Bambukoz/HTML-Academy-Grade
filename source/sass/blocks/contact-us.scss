@@ -95,4 +95,14 @@
       margin-right: 0;
     }
   }
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+
+  &:hover + .contact-us__icon-phone,
+  &:focus + .contact-us__icon-phone {
+    stroke: $primary;
+  }
 }

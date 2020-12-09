@@ -7,10 +7,15 @@
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 150px;
+  overflow: hidden;
 
   @include tablet {
-    overflow: hidden;
+    padding-top: 30px;
     margin-bottom: 62px;
+  }
+
+  @include mobile {
+    padding-top: 0;
   }
 }
 
@@ -18,7 +23,7 @@
   width: 902px;
   position: relative;
   display: flex;
-  column-gap: 100px;
+  column-gap: 40px;
   margin-left: 19.5%;
   margin-right: auto;
   border-bottom: 1px solid $color-text-dark-03;
@@ -43,6 +48,7 @@
   padding-top: 13px;
   padding-bottom: 15px;
   cursor: pointer;
+  margin-right: 60px;
 }
 
 .tabs__input-text {
@@ -52,16 +58,17 @@
   text-align: center;
   letter-spacing: -0.415px;
   color: $color-text-dark-03;
+
+  &:hover,
+  &:focus {
+    @include desktop {
+      color: $secondary;
+    }
+  }
 }
 
 input[type="radio"]:checked + .tabs__input-text {
   color: $primary;
-}
-
-input[type="radio"] {
-  appearance: none;
-  width: 0;
-  height: 0;
 }
 
 .tabs__wrapper {
@@ -168,9 +175,11 @@ input[type="radio"] {
 
 .tabs__text {
   @include style-reset;
+  max-height: 600px;
   letter-spacing: -0.466667px;
   color: $color-text-dark-07;
   margin-bottom: 49px;
+  overflow: scroll;
 
   @include tablet {
     text-align: center;
@@ -189,8 +198,8 @@ input[type="radio"] {
 }
 
 .tabs__photo {
-  flex-grow: 1;
   height: 100%;
+  flex-grow: 1;
   line-height: 0;
 
   @include tablet {
@@ -274,10 +283,12 @@ input[type="radio"] {
 
 .tabs__reviews-text {
   @include style-reset;
+  max-height: 250px;
   font-size: 14px;
   letter-spacing: -0.408333px;
   color: $color-text-dark-07;
   margin-bottom: 31px;
+  overflow: scroll;
 
   @include mobile {
     text-align: center;

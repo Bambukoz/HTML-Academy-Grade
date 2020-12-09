@@ -96,6 +96,15 @@
     color: $color-text-darkest;
   }
 
+  &:hover,
+  &:focus {
+    border-color: $color-text-dark-05;
+  }
+
+  &:active {
+    border-color: $color-text-dark-07;
+  }
+
   &:invalid {
     border-color: $primary;
   }

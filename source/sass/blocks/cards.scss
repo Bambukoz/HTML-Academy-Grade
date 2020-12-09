@@ -5,14 +5,14 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 63px;
+  margin-bottom: 43px;
 
   @include tablet {
-    margin-bottom: 65px;
+    margin-bottom: 25px;
   }
 
   @include mobile {
-    margin-bottom: 7px;
+    margin-bottom: 17px;
   }
 }
 
@@ -98,7 +98,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  row-gap: 102px;
+  row-gap: 82px;
   column-gap: 5%;
   margin-left: auto;
   margin-right: auto;
@@ -106,17 +106,18 @@
   @include tablet {
     width: 82%;
     min-width: 320px;
-    row-gap: 20px;
+    row-gap: 0;
     justify-content: center;
   }
 
   @include mobile {
-    row-gap: 35px;
+    row-gap: 15px;
   }
 }
 
 .cards__item {
   width: 350px;
+  margin-bottom: 20px;
 
   // Ребята, простите, но я жулик
   @media (min-width: 1920px) and (max-width: 1920px) {
@@ -137,6 +138,12 @@
 
   @include tablet {
     width: 288px;
+  }
+
+  &:last-child {
+    @include mobile {
+      margin-bottom: 0;
+    }
   }
 }
 

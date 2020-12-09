@@ -48,22 +48,6 @@
     }
   }
 
-  &--link {
-    width: 266px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    background-color: transparent;
-    border: 1px solid $color-border-07;
-    padding: 30px 23px;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
   &--buy {
     width: 250px;
     padding-left: 39px;
@@ -81,10 +65,15 @@
     margin-top: auto;
 
     @include tablet {
-      width: 291px;
+      width: 286px;
       position: absolute;
-      bottom: -4px;
-      left: -3px;
+      bottom: -2px;
+      left: 0;
+    }
+
+    @include mobile {
+      left: 0;
+      bottom: -3px;
     }
   }
 
@@ -101,6 +90,43 @@
 
     @include mobile {
       width: 288px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    @include desktop {
+      background-color: $secondary;
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+
+    @include tablet {
+      background-color: $secondary;
+    }
+  }
+
+  &--link {
+    width: 266px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: transparent;
+    border: 1px solid $color-border-07;
+    padding: 30px 23px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+      display: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
     }
   }
 }

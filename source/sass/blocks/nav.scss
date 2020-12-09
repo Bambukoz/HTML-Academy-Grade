@@ -72,4 +72,11 @@
       background-position: center;
     }
   }
+
+  &:hover,
+  &:focus {
+    @include desktop {
+      color: $primary;
+    }
+  }
 }
