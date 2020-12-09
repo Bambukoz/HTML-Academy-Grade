@@ -20,7 +20,7 @@
     width: 288px;
     min-height: 630px;
     padding-top: 30px;
-    padding-left: 18px;
+    padding-left: 19px;
     padding-right: 20px;
     border-radius: 6px 6px 0 0;
 
@@ -33,29 +33,16 @@
   }
 
   &--complex {
-    width: 376px;
-    border: 3px solid $primary;
-    padding-top: 40px;
-    padding-left: 30px;
-    margin-right: 3.9%;
-    color: $primary;
-
-    @media (max-width: 1200px) {
-      width: 340px;
-    }
+    margin-right: 36px;
 
     @include tablet {
-      width: 291px;
-      padding-top: 28px;
-      padding-right: 19px;
-      padding-left: 19px;
-      margin-right: 7.5%;
+      margin-right: 49px;
     }
 
     @include mobile {
-      min-height: 616px;
-      margin-left: auto;
+      min-height: 617px;
       margin-right: auto;
+      margin-left: auto;
     }
   }
 }
@@ -64,7 +51,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   @include tablet {
     flex-direction: column;
@@ -88,11 +75,6 @@
     text-align: center;
     margin-bottom: 7px;
   }
-
-  &--complex {
-    letter-spacing: normal;
-    color: $primary;
-  }
 }
 
 .price-card__price {
@@ -104,14 +86,6 @@
 
   @include tablet {
     padding-right: 10px;
-  }
-
-  &--complex {
-    color: $primary;
-
-    @include tablet {
-      padding-right: 0;
-    }
   }
 }
 
@@ -142,10 +116,6 @@
   @include tablet {
     padding-top: 21px;
   }
-
-  &--complex {
-    border-color: $primary-05;
-  }
 }
 
 .price-card__item {
@@ -175,11 +145,50 @@
   position: absolute;
   top: 10px;
   left: 1px;
-  fill: currentColor;
+  fill: $primary;
 }
 
 .price-card__item-text {
   @include style-reset;
   line-height: 32px;
   color: $color-text-dark;
+}
+
+.price-card:hover {
+  border: 3px solid $primary;
+  padding-top: 42px;
+  padding-left: 26px;
+  padding-right: 27px;
+  padding-bottom: 27px;
+
+  @include tablet-min {
+    padding-top: 28px;
+    padding-right: 18px;
+    padding-left: 17px;
+    padding-bottom: 28px;
+  }
+
+  & .btn--card-buy {
+    @include tablet-min {
+      bottom: -4px;
+      left: -2px;
+    }
+  }
+
+  & .price-card__price {
+    color: $primary;
+  }
+
+  & .price-card__title {
+    letter-spacing: normal;
+    color: $primary;
+  }
+
+  & .price-card__list {
+    border-color: $primary-05;
+  }
+
+  & .price-card__icon {
+    fill: currentColor;
+  }
 }

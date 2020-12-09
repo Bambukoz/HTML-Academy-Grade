@@ -15,9 +15,10 @@ const imageMin = require(`gulp-imagemin`);
 const imageWebp = require(`gulp-webp`);
 const svgStore = require(`gulp-svgstore`);
 const del = require(`del`);
-// const minify = require(`gulp-minify`);
-// const htmlMin = require(`gulp-htmlmin`);
-const ghPages = require(`gulp-gh-pages`);
+const concat = require(`gulp-concat`);
+const minify = require(`gulp-minify`);
+const htmlMin = require(`gulp-htmlmin`);
+const ghPages = require(`gh-pages`);
 
 // Css
 
@@ -30,8 +31,9 @@ const css = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    // .pipe(csso())
-    // .pipe(rename(`style.min.css`))
+    .pipe(gulp.dest(`build/css`))
+    .pipe(csso())
+    .pipe(rename(`style.min.css`))
     .pipe(sourcemap.write(`.`))
     .pipe(gulp.dest(`build/css`))
     .pipe(sync.stream());
@@ -86,10 +88,10 @@ exports.sprite = sprite;
 
 const html = () => {
   return gulp.src(`source/**/*.html`)
-    // .pipe(htmlMin({
-    //   removeComments: true,
-    //   collapseWhitespace: false
-    // }))
+    .pipe(htmlMin({
+      removeComments: true,
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest(`build`));
 };
 
@@ -99,11 +101,12 @@ exports.html = html;
 
 const js = () => {
   return gulp.src(`source/js/**/*.js`)
-    // .pipe(minify({
-    //   ext: {
-    //     min: `.min.js`
-    //   }
-    // }))
+    .pipe(concat(`script.js`))
+    .pipe(minify({
+      ext: {
+        min: `.min.js`
+      }
+    }))
     .pipe(gulp.dest(`build/js`));
 };
 
@@ -114,8 +117,7 @@ exports.js = js;
 const copy = () => {
   return gulp.src([
     `source/fonts/**/*`,
-    `source/img/**/*`,
-    `source/js/**/*`
+    `source/img/**/*`
   ], {
     base: `source`
   })
@@ -151,9 +153,9 @@ exports.server = server;
 
 // Deploy
 
-const deploy = () => {
-  return gulp.src(`build/**/*`)
-    .pipe(ghPages());
+const deploy = (cb) => {
+  ghPages.publish('build', cb);
+
 };
 
 exports.deploy = deploy;

@@ -1,35 +1,9 @@
 'use strict';
 
 (() => {
-  const pageClass = {
-    NOJS: `header__container--nojs`,
-    OPEN: `header__container--open`
-  };
-  const header = document.querySelector(`.js-header`);
-  const menu = header.querySelector(`.js-menu`);
-  const openBtn = header.querySelector(`.js-btn-open`);
-  const closeBtn = header.querySelector(`.js-btn-close`);
-
-  const onHeaderToggleClick = (evt) => {
-    if (evt.target === openBtn) {
-      menu.classList.add(pageClass.OPEN);
-    }
-    if (evt.target === closeBtn) {
-      menu.classList.remove(pageClass.OPEN);
-    }
-  };
-
-  menu.classList.remove(pageClass.NOJS);
-  openBtn.style.display = `block`;
-
-  header.addEventListener(`click`, onHeaderToggleClick);
-})();
-
-(() => {
   const tabClass = {
     ACTIVE: `tabs__item--active`
   };
-  const cardsList = document.querySelector(`.cards__list`);
   const cardClass = {
     LINK: `cards__link`
   };
@@ -58,14 +32,16 @@
 
   const onCardClick = (evt) => {
     if (evt.target.classList.contains(cardClass.LINK)) {
-      const card = evt.target;
+      const card = evt.target.dataset.name;
+      showActiveTab(card);
       for (let toggle of tabToggles) {
-        showActiveTab(card.dataset.name);
-        toggle.checked = true;
+        if (toggle.dataset.value === card) {
+          toggle.checked = true;
+        }
       }
     }
   };
 
-  cardsList.addEventListener(`click`, onCardClick);
+  document.addEventListener(`click`, onCardClick);
   tabSection.addEventListener(`change`, onToggleChange);
 })();
